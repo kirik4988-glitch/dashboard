@@ -12,7 +12,7 @@ st.set_page_config(
 # 3. Create a function to load and preprocess data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('/content/Bakery.csv')
+    df = pd.read_csv('Bakery.csv')
     df['DateTime'] = pd.to_datetime(df['DateTime'])
     df['Year'] = df['DateTime'].dt.year
     df['Month'] = df['DateTime'].dt.month
